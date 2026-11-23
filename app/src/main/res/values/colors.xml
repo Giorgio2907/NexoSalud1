@@ -1,0 +1,9 @@
+<resources>
+    <color name="verde">#075F55</color>
+    <color name="verde_claro">#E1F4ED</color>
+    <color name="fondo">#F4F8F6</color>
+    <color name="tinta">#132724</color>
+    <color name="secundario">#4A625D</color>
+    <color name="borde">#D4E1DC</color>
+    <color name="blanco">#FFFFFF</color>
+</resources>

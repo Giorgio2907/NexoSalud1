@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/raiz" android:layout_width="match_parent" android:layout_height="match_parent" android:paddingHorizontal="16dp" android:orientation="vertical" android:background="@color/fondo">
+    <include layout="@layout/barra"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:fillViewport="true">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <TextView style="@style/TextoNexo" android:text="Registra la acción que debe atenderse" android:textSize="22sp" android:textColor="@color/tinta" android:textStyle="bold"/>
+            <TextView style="@style/TextoNexo" android:text="Completa todos los datos. Los plazos usan la hora local del dispositivo." android:textSize="14sp" android:textColor="@color/secundario"/>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" android:hint="Código de referencia">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/codigo" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="text" android:maxLength="40" android:minHeight="56dp" android:maxLines="1" android:singleLine="true"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" android:hint="Acción pendiente">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/accion" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textCapSentences|textMultiLine" android:maxLength="300" android:minHeight="56dp" android:minLines="2" android:maxLines="5"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView style="@style/TextoNexo" android:text="Responsable asignado" android:textSize="14sp" android:textColor="@color/tinta" android:textStyle="bold"/>
+            <Spinner android:id="@+id/responsable" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="52dp" android:backgroundTint="@color/verde"/>
+            <com.google.android.material.button.MaterialButton style="@style/BotonSecundario" android:id="@+id/deteccion" android:text="Elegir detección"/>
+            <com.google.android.material.button.MaterialButton style="@style/BotonSecundario" android:id="@+id/plazo" android:text="Elegir plazo"/>
+            <com.google.android.material.button.MaterialButton style="@style/BotonNexo" android:id="@+id/guardar" android:text="Guardar tarea"/>
+            <TextView style="@style/TextoNexo" android:text="Para la exposición utiliza códigos ficticios. El reenvío oficial se realiza en REFCON." android:textSize="13sp" android:textColor="@color/secundario"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
